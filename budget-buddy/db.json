@@ -1,0 +1,53 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": 15.52,
+      "date": "2023-01-20"
+    },
+    {
+      "id": 2,
+      "description": "Target",
+      "category": "Retail",
+      "amount": 128.57,
+      "date": "2023-01-15"
+    },
+    {
+      "id": 3,
+      "description": "Bass Pro Shop",
+      "category": "Retail",
+      "amount": 58.37,
+      "date": "2023-01-19"
+    },
+    {
+      "id": 4,
+      "description": "McDonalds",
+      "category": "Food",
+      "amount": 9.97,
+      "date": "2023-01-14"
+    },
+    {
+      "id": 5,
+      "description": "FlatEarth Global",
+      "category": "Walker",
+      "amount": 9.69,
+      "date": "2023-01-09"
+    },
+    {
+      "description": "xnxx",
+      "category": "Recreational",
+      "amount": 19.99,
+      "date": "2023-01-21",
+      "id": 7
+    },
+    {
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": 9.99,
+      "date": "2023-01-25",
+      "id": 9
+    }
+  ]
+}
