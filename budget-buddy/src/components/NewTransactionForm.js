@@ -34,13 +34,16 @@ function NewTransactionForm({ onFormSubmit }) {
                 type="date" 
                 placeholder="Date">
             </input>
-                <input 
+            <div className="divider"/>
+            <input 
+                className="form-input"
                 name="description" 
                 onChange={handleFormChange} 
                 value={formData.description} 
                 type="text" 
                 placeholder="Description">
             </input>
+            <div className="divider"/>
             <input 
                 name="amount" 
                 onChange={handleFormChange} 
@@ -48,13 +51,16 @@ function NewTransactionForm({ onFormSubmit }) {
                 type="number" 
                 placeholder="Amount">
             </input>
+            <div className="divider"/>
             <input 
+                className="form-input"
                 name="category" 
                 onChange={handleFormChange} 
                 value={formData.category} 
                 type="text" 
                 placeholder="Category">
             </input>
+            <div className="divider"/>
             <button type="submit">Submit</button>
         </form>
         </>

@@ -4,7 +4,12 @@ import CategoryFilter from './CategoryFilter'
 function DateFilter() {
     return(
         <>
-        <p><a>Daily</a>/<a>Weekly</a>/<a>Monthly</a></p>
+            <button className="date-filter-button">Today</button>
+            <div className="divider"/>
+            <button className="date-filter-button">This Week</button>
+            <div className="divider"/>
+            <button className="date-filter-button">This Month</button>
+            <div className="divider"/>
         </>
     )
 }

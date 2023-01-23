@@ -29,25 +29,25 @@
       "date": "2023-01-14"
     },
     {
-      "id": 5,
-      "description": "FlatEarth Global",
-      "category": "Walker",
-      "amount": 9.69,
-      "date": "2023-01-09"
+      "description": "Light Equipment/Personnel Vehicle",
+      "category": "Misc",
+      "amount": "500.00",
+      "date": "1995-12-22",
+      "id": 5
     },
     {
-      "description": "xnxx",
-      "category": "Recreational",
-      "amount": 19.99,
-      "date": "2023-01-21",
-      "id": 7
-    },
-    {
-      "description": "Chipotle",
+      "description": "Benihana",
       "category": "Food",
-      "amount": 9.99,
-      "date": "2023-01-25",
-      "id": 9
+      "amount": "42.00",
+      "date": "2023-12-25",
+      "id": 6
+    },
+    {
+      "description": "It's ya BOI",
+      "category": "Misc",
+      "amount": "20000.00",
+      "date": "1995-12-22",
+      "id": 7
     }
   ]
 }
