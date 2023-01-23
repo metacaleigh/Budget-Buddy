@@ -1,9 +1,16 @@
+*
+{
+  margin: 0;
+  padding: 0
+}
+
 .logo-image{
-  height: 300px
+  height: 300px;
+  width: 350px
 }
 
 #app-comp {
-  background-color: rgb(0, 83, 69);
+  background-color: #175c59;
   background-size: cover;
   min-height: 100vh;
   min-width: 90vw;
@@ -11,16 +18,28 @@
   margin: 0
 }
 
+.NavBar {
+  position: relative;
+  display: flex; 
+  flex-direction: row;
+  max-width: max-content;
+  top: -200px;
+  left: 1300px;
+  width: 700px
+}
+
 .TableHeader {
-  width: 250px;
+  width: 350px;
+  height: 50px;
   border: 1px solid #b8e28a;
   background-color: #b8e28a;
   font-family: 'Poppins', sans-serif;
   color: rgb(0, 83, 69);
+  font-size: 20px;
 }
 
 .TableDataOdd{
-  width: 250px;
+  width: 350px;
   height: 50px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.551);
@@ -29,10 +48,127 @@
 }
 
 .TableDataEven{
-  width: 250px;
+  width: 350px;
   height: 50px;
   text-align: center;
   background-color: rgba(214, 214, 214, 0.545);
   font-family: 'Poppins', sans-serif;
   
+}
+
+.form-input {
+  border: none;
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  border-color: white;
+}
+
+input[type=date] {
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  border-color: white;
+  border: none;
+}
+
+input[type=number] {
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  border-color: white;
+  border: none;
+}
+
+#search-input {
+  border: none;
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  border-color: white;
+  width: 1375px;
+}
+
+button[type=submit] {
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: #35b276;
+  /* border-color: #35b276; */
+}
+
+.transaction-button {
+  border: none;
+  border-radius: 25px;
+  padding: 2px;
+  margin: 2px;
+  background-color: #35b276;
+  color: white
+}
+
+.navbar-button {
+  /* display: inline; */
+  padding: 15px;
+  max-width: 300px;
+  margin: 10 px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color: #35b276;
+  color: white;
+}
+
+#wallet {
+  position: relative;
+  top: -175px;
+  left: -400px;
+}
+
+.divider{
+  width: 20px;
+  height: auto;
+  display: inline-block;
+}
+
+.date-filter-button {
+  padding: 10px;
+  margin: 10 px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: #35b276;
+}
+
+.user-wallet {
+  position: relative;
+  background-color: #35b276;
+  width: 500px;
+  top: -725px;
+  left: 800px;
+  height: 285px;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+#wallet-h2 {
+  color: #175c59;
+}
+
+.wallet-content {
+  position: relative;
+
+}
+
+#category-filter label {
+  font-family: 'Poppins', sans-serif;
+  color: white;
 }

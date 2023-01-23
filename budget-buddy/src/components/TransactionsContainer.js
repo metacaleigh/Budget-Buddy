@@ -4,12 +4,17 @@ import Search from './Search'
 import NewTransactionForm from './NewTransactionForm'
 import DateFilter from './DateFilter'
 import PieChart from './PieChart'
+import Wallet from '../images/Wallet.png'
+import UserWallet from './UserWallet'
+import CategoryFilter from './CategoryFilter'
+import { CATEGORIES } from '../data'
 
-function TransactionsContainer() {
-    const baseUrl = "http://localhost:3000/transactions"
 
-    const [transactions, setTransactions] = useState([])
+function TransactionsContainer({ transactions, setTransactions, baseUrl}) {
+    
+
     const [search, setSearch] = useState("")
+    const [selectedCategory, setSelectedCategory] = useState("All")
 
     useEffect(() => {
         fetch(baseUrl)
@@ -21,26 +26,10 @@ function TransactionsContainer() {
         return transaction.description.toLowerCase().includes(search.toLowerCase())
     })
 
-    function onFormSubmit(newTransaction) {
-        const newTransactionBody = {
-            ...newTransaction,
-            amount: Number(newTransaction.amount)
-        }
-
-        fetch(baseUrl, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newTransactionBody)
-        })
-            .then(res => res.json())
-            .then(setTransactions([...transactions, newTransaction]))
-    }
+   
 
     function handleDelete(id) {
         const newList = filteredTransactions.filter((transaction) => transaction.id !== id)
-        .map((transaction, index) => ({ ...transaction, id: Number(index)+ 1}))
         fetch(baseUrl + `/${id}`, {method: 'DELETE'})
           .then(setTransactions(newList))
     }
@@ -48,8 +37,7 @@ function TransactionsContainer() {
     return(
         <div>
             <Search search={search} setSearch={setSearch}/>
-            <NewTransactionForm onFormSubmit={onFormSubmit}/>
-            <DateFilter />
+            <DateFilter /> <CategoryFilter categories={CATEGORIES} setSelectedCategory={setSelectedCategory}/>
             <table className="TransactionTable">
                 <tbody>
                     <tr>
@@ -69,6 +57,10 @@ function TransactionsContainer() {
                     <TransactionList transactions={filteredTransactions} handleDelete={handleDelete} />
                 </tbody>
             </table>
+            <div>
+                <img src={Wallet} alt="wallet" id="wallet"/>
+                <UserWallet />
+            </div>
             <PieChart />
         </div>
     )
