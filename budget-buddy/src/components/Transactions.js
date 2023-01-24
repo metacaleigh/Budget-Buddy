@@ -10,7 +10,7 @@ function Transactions({ description, id, amount, category, date, handleDelete, i
         <tr className={`${table}`}>
             <td>
                 <button className="transaction-button" onClick={() => handleDelete(id)}> ✖︎ </button>
-                <button className="transaction-button" > ✎ </button>
+                {/* <button className="transaction-button" > ✎ </button> */}
                 {date}
             </td>
             <td>{description}</td>

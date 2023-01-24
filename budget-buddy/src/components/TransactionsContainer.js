@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import TransactionList from './TransactionList'
 import Search from './Search'
-import NewTransactionForm from './NewTransactionForm'
 import DateFilter from './DateFilter'
 import PieChart from './PieChart'
 import Wallet from '../images/Wallet.png'
@@ -10,7 +9,8 @@ import CategoryFilter from './CategoryFilter'
 import { CATEGORIES } from '../data'
 
 
-function TransactionsContainer({ transactions, setTransactions, baseUrl}) {
+
+function TransactionsContainer({ transactions, setTransactions, baseUrl, balance }) {
     
 
     const [search, setSearch] = useState("")
@@ -34,10 +34,50 @@ function TransactionsContainer({ transactions, setTransactions, baseUrl}) {
           .then(setTransactions(newList))
     }
 
+    const eachCategory = transactions.map((transaction) => {
+        return transaction.category
+    })
+
+    const eachAmount = transactions.map((transaction) => {
+        return transaction.amount
+    })
+    const eachTransaction = transactions.map((transaction) => {
+        return transaction
+    })
+
+    let today = new Date()
+    let todayString = new Date(today.getTime() - (today.getTimezoneOffset() * 60000 ))
+                    .toISOString()
+                    .split("T")[0]
+
+
+    function handleTodayClick() {
+        const todaysTransactions = transactions.filter((transaction) => {
+            if (transaction.date === todayString) {
+                return transaction
+            }
+        })
+        setTransactions(todaysTransactions)
+    }
+
+    // function handleThisWeekClick() {
+    //     const thisWeeksTransactions = transactions.filter((transaction) => {
+    //         if
+    //     })
+    // }
+
+    // function handleThisMonthClick() {
+    //     const thisMonthsTransactions = transactions.filter((transaction) => {
+
+    //     })
+    // }
+
+
+
     return(
-        <div>
+        <div className="transactioncontainer">
             <Search search={search} setSearch={setSearch}/>
-            <DateFilter /> <CategoryFilter categories={CATEGORIES} setSelectedCategory={setSelectedCategory}/>
+            <DateFilter handleTodayClick={handleTodayClick}/> <CategoryFilter categories={CATEGORIES} setSelectedCategory={setSelectedCategory}/>
             <table className="TransactionTable">
                 <tbody>
                     <tr>
@@ -57,11 +97,11 @@ function TransactionsContainer({ transactions, setTransactions, baseUrl}) {
                     <TransactionList transactions={filteredTransactions} handleDelete={handleDelete} />
                 </tbody>
             </table>
-            <div>
+            <div id="wallet-info-flex">
                 <img src={Wallet} alt="wallet" id="wallet"/>
-                <UserWallet />
+                <UserWallet balance={balance}/>
             </div>
-            <PieChart />
+            <PieChart category={eachCategory} amount={eachAmount} transaction={eachTransaction}/>
         </div>
     )
 }

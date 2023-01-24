@@ -1,16 +1,14 @@
 import React from 'react'
 import CategoryFilter from './CategoryFilter'
 
-function DateFilter() {
+function DateFilter({ handleTodayClick }) {
+    
     return(
-        <>
-            <button className="date-filter-button">Today</button>
-            <div className="divider"/>
+        <div id="date-filter-flex">
+            <button onClick={handleTodayClick} className="date-filter-button">Today</button>
             <button className="date-filter-button">This Week</button>
-            <div className="divider"/>
             <button className="date-filter-button">This Month</button>
-            <div className="divider"/>
-        </>
+        </div>
     )
 }
 
