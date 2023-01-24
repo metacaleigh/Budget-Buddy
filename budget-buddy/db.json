@@ -29,24 +29,10 @@
       "date": "2023-01-14"
     },
     {
-      "description": "Light Equipment/Personnel Vehicle",
-      "category": "Misc",
-      "amount": "500.00",
-      "date": "1995-12-22",
-      "id": 5
-    },
-    {
-      "description": "Benihana",
+      "description": "Yolo",
       "category": "Food",
-      "amount": "42.00",
-      "date": "2023-12-25",
-      "id": 6
-    },
-    {
-      "description": "It's ya BOI",
-      "category": "Misc",
-      "amount": "20000.00",
-      "date": "1995-12-22",
+      "amount": "50.00",
+      "date": "2023-01-23",
       "id": 7
     }
   ]
