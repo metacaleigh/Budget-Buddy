@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 function AddBalanceForm({ balance, onFormSubmit }) {
+    const initialData = ""
 
-    const [walletFormData, setWalletFormData] = useState("")
+    const [walletFormData, setWalletFormData] = useState(initialData)
 
     function handleFormChange(e) {
         setWalletFormData(e.target.value)
@@ -11,6 +12,7 @@ function AddBalanceForm({ balance, onFormSubmit }) {
     function handleFormSubmit(e) {
         e.preventDefault()
         onFormSubmit(walletFormData)
+        setWalletFormData(initialData)
     }
 
     return(
