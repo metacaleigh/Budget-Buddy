@@ -13,7 +13,8 @@ function App({ Route }) {
   const baseUrl = "http://localhost:3001/transactions"
 
   const [transactions, setTransactions] = useState([])
-  const [balance, setBalance] = useState(0)
+  const [balance, setBalance] = useState(1000)
+  const [transactionTotal, setTransactionTotal] = useState(0)
 
   function onFormSubmit(newBalance) {
     let walletTotal = Math.abs(Number(newBalance) + Number(balance))
@@ -34,7 +35,13 @@ function App({ Route }) {
           <ModifyTransactions transactions={transactions} setTransactions={setTransactions} baseUrl={baseUrl} />
         </Route>
         <Route exact path="/">
-          <TransactionsContainer balance={balance} transactions={transactions} setTransactions={setTransactions} baseUrl={baseUrl} />
+          <TransactionsContainer 
+            transactionTotal={transactionTotal}  
+            setTransactionTotal={setTransactionTotal}
+            balance={balance} 
+            transactions={transactions} 
+            setTransactions={setTransactions} 
+            baseUrl={baseUrl} />
         </Route>
         <Route path="/add-to-wallet">
           <AddBalanceForm balance={balance} onFormSubmit={onFormSubmit}/>

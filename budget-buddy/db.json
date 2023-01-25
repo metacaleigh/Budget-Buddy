@@ -29,11 +29,39 @@
       "date": "2023-01-14"
     },
     {
-      "description": "Yolo",
-      "category": "Food",
-      "amount": "50.00",
-      "date": "2023-01-23",
+      "description": "Amazon",
+      "category": "Retail",
+      "amount": 29.99,
+      "date": "2023-01-24",
+      "id": 5
+    },
+    {
+      "description": "Rent",
+      "category": "Bills",
+      "amount": "950.00",
+      "date": "2023-01-01",
+      "id": 6
+    },
+    {
+      "description": "Netflix",
+      "category": "Entertainment",
+      "amount": "7.99",
+      "date": "2023-01-24",
       "id": 7
+    },
+    {
+      "description": "Light Equipment/Personnel Vehicle",
+      "category": "Vehicle",
+      "amount": "300.00",
+      "date": "2023-01-23",
+      "id": 8
+    },
+    {
+      "description": "New Car",
+      "category": "Vehicle",
+      "amount": "500.00",
+      "date": "2022-12-20",
+      "id": 9
     }
   ]
 }
